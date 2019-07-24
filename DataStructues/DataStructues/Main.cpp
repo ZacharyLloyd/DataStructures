@@ -8,9 +8,10 @@ void main() {
 	Stack myStack = Stack();
 	Queue myQueue = Queue();
 
-	int inputInt;
-	int choice = 99;
+	int inputInt; //Collect input
+	int choice = 99; //Break out of loop
 	do {
+		//Menu(UI)
 		cout << "\nMenu to manipulate integer stack and queue:\n";
 		cout << "1: To push an integer on stack\n";
 		cout << "2: To pop an integer from stack\n";
@@ -23,26 +24,26 @@ void main() {
 		cin >> choice;
 
 		switch (choice) {
-		case 1:
+		case 1: //Entering input into the Stack
 			cout << "\nEnter an integer to STACK: ";
 			cin >> inputInt;
 			myStack.PushToStack(inputInt);
 			break;
-		case 2:
+		case 2: //Removing input from the Stack
 			cout << "\nprevious Top Item = " << myStack.PopFromStack() << endl;
 			break;
-		case 3:
+		case 3: //Displaying the Stack
 			myStack.DisplayStack();
 			break;
-		case 11:
+		case 11: //Entering input into the Queue
 			cout << "\nEnter an integer to QUEUE: ";
 			cin >> inputInt;
 			myQueue.PushToQueue(inputInt);
 			break;
-		case 12:
+		case 12: //Removing input from the Queue
 			cout << "\nprevious Left Item = " << myQueue.PopFromQueue() << endl;
 			break;
-		case 13:
+		case 13: //Displaying the Queue
 			myQueue.DisplayQueue();
 			break;
 

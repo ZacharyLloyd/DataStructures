@@ -1,17 +1,18 @@
 #include "StackQueue.h"
 #include <iostream>
-
+//Constructor
 Stack::Stack() {
 	bottomStack = nullptr;
 	topStack = nullptr;
 	count = 0;
 }
+//Constructor
 Queue::Queue() {
 	bottomQueue = nullptr;
 	topQueue = nullptr;
 	count = 0;
 }
-
+//Adding to the stack
 void Stack::PushToStack(int inData) {
 	Node * nPtr = new Node(inData);
 	nPtr->SetNextPointer(nullptr);
@@ -27,7 +28,7 @@ void Stack::PushToStack(int inData) {
 		count++;
 	}
 }
-
+//Removing from the stack
 int Stack::PopFromStack() {
 	Node * nPtr = bottomStack;
 	int topItem;
@@ -48,7 +49,7 @@ int Stack::PopFromStack() {
 	count--;
 	return topItem;
 }
-
+//Displaying the stack
 void Stack::DisplayStack() {
 	Node *nPtr;
 	if (count != 0) {
@@ -65,7 +66,7 @@ void Stack::DisplayStack() {
 		std::cout << "\nStack is empty" << std::endl;
 	}
 }
-
+//Adding to the Queue
 void Queue::PushToQueue(int inData) {
 	Node * nPtr = new Node(inData);
 	nPtr->SetNextPointer(nullptr);
@@ -81,7 +82,7 @@ void Queue::PushToQueue(int inData) {
 		count++;
 	}
 }
-
+//Removing from the Queue
 int Queue::PopFromQueue() {
 	Node * nPtr = bottomQueue;
 	int btmItem;
@@ -98,7 +99,7 @@ int Queue::PopFromQueue() {
 	}
 	return btmItem;
 }
-
+//Displaying the Queue
 void Queue::DisplayQueue() {
 	Node *nPtr;
 	if (count != 0) {
